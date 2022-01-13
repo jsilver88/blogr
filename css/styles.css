@@ -1,0 +1,516 @@
+@import url('https://fonts.googleapis.com/css2?family=Overpass:wght@300;600&family=Ubuntu:wght@400;500;700&display=swap');
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 62.5%;
+}
+
+body {
+  font-family: 'Overpass', sans-serif;
+  font-weight: 400;
+  color: hsl(207, 13%, 34%);
+  overflow-x: hidden;
+}
+
+ul {
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+}
+
+h1,
+h2,
+h3,
+h4 {
+  font-family: 'Ubuntu', sans-serif;
+  color: hsl(208, 49%, 24%);
+}
+
+section {
+  padding-block: 10rem;
+}
+
+img {
+  max-width: 100%;
+}
+
+.container {
+  max-width: min(90%, 144rem);
+  margin: 0 auto;
+}
+
+.btn {
+  display: inline-block;
+  padding: 1.2rem 2.7rem;
+  background: transparent;
+  border: transparent;
+  color: hsl(356, 100%, 66%);
+  font-size: 1.4rem;
+  transition: all 0.3s ease;
+}
+
+.btn-white {
+  background: #fff;
+  border: 1px solid #fff;
+  border-radius: 4rem;
+  font-weight: 600;
+}
+
+.btn-white:hover {
+  background: transparent;
+  border: 1px solid #fff;
+  color: #fff;
+}
+
+.btn-outline {
+  font-weight: 600;
+  color: #fff;
+  border: 1px solid #fff;
+  border-radius: 4rem;
+}
+
+.btn-outline:hover {
+  background: #fff;
+  color: hsl(356, 100%, 66%);
+}
+
+.btn-full {
+  background: linear-gradient(
+    to right,
+    hsl(13, 100%, 72%),
+    hsl(353, 100%, 62%)
+  );
+  color: #fff !important;
+  border-radius: 2rem;
+  margin-top: 1.5rem;
+}
+
+.header {
+  background: linear-gradient(
+      58deg,
+      hsla(13, 100%, 72%, 0.898),
+      hsl(353, 100%, 62%)
+    ),
+    url('../images/bg-pattern-intro-desktop.svg') no-repeat;
+  background-size: 150%;
+  background-position: center left;
+  border-bottom-left-radius: 7rem;
+}
+
+.navbar {
+  max-width: min(90%, 144rem);
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  padding-block: 4rem;
+}
+
+.logo {
+  width: 8rem;
+}
+
+.nav-list {
+  display: flex;
+  margin-left: 4rem;
+}
+
+.nav-list li {
+  margin-right: 2rem;
+  position: relative;
+}
+
+.link {
+  font-weight: 600;
+  color: #fff;
+  font-size: 1.4rem;
+}
+
+.link:hover {
+  text-decoration: underline;
+}
+
+.nav-sublinks {
+  position: absolute;
+  display: flex;
+  flex-direction: column;
+  background: #fff;
+  left: 0;
+  top: 3rem;
+  width: 15rem;
+  border-radius: 1rem;
+  padding: 1.5rem 2.5rem 1.5rem 1.5rem;
+  max-height: 0;
+  overflow: hidden;
+  visibility: hidden;
+  transition: all 0.05s ease;
+}
+
+.nav-sublinks li {
+  margin-block: 0.5rem;
+}
+
+.nav-sublinks .sublink {
+  color: hsl(207, 13%, 34%);
+  font-size: 1.3rem;
+}
+
+.nav-sublinks .sublink:hover {
+  font-weight: bold;
+}
+
+.nav-sublinks.active {
+  visibility: visible;
+  overflow: visible;
+  max-height: 50rem;
+}
+
+.link span {
+  margin-left: 0.2rem;
+}
+
+.hamburger,
+.mobile-nav {
+  display: none;
+}
+
+.btn-list {
+  display: flex;
+  align-items: center;
+}
+
+.push {
+  margin-left: auto;
+}
+
+.btn-list .link {
+  margin-right: 2rem;
+}
+
+.hero {
+  min-height: 30vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.hero h1 {
+  font-size: 4.2rem;
+  font-weight: 400;
+  color: #fff;
+  margin-bottom: 2rem;
+}
+
+.hero p {
+  font-size: 1.6rem;
+  color: rgba(255, 255, 255, 0.8);
+  margin-bottom: 4rem;
+}
+
+.hero .cta-container .btn-outline {
+  margin-left: 1.4rem;
+}
+
+.design h2 {
+  font-size: 2.6rem;
+  font-weight: 300;
+  margin-bottom: 4rem;
+  text-align: center;
+}
+
+.design .container {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  place-items: center;
+  gap: 10rem;
+  position: relative;
+}
+
+.design .content h3 {
+  font-size: 2.2rem;
+  font-weight: 300;
+  margin-block: 2rem;
+}
+
+.design .content p {
+  font-size: 1.5rem;
+  font-weight: 300;
+  line-height: 1.7;
+  opacity: 0.9;
+  margin-bottom: 4rem;
+}
+
+.infrastructure {
+  background: linear-gradient(
+      to left,
+      hsl(237, 17%, 21%, 0.9),
+      hsl(237, 23%, 32%, 0.9)
+    ),
+    url('../images/bg-pattern-circles.svg') no-repeat;
+  background-size: contain;
+  background-position: top 50px 100px;
+  min-height: 32vh;
+  border-top-right-radius: 7rem;
+  border-bottom-left-radius: 7rem;
+}
+
+.infrastructure .container {
+  position: relative;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 2rem;
+  place-items: center;
+}
+
+.infrastructure .content {
+  max-width: 90%;
+}
+
+.infrastructure .content h3 {
+  font-size: 2.6rem;
+  font-weight: 300;
+  color: #fff;
+  margin-bottom: 2rem;
+}
+
+.infrastructure .content p {
+  font-size: 1.5rem;
+  font-weight: 300;
+  line-height: 1.7;
+  color: rgba(255, 255, 255, 0.8);
+}
+
+.infrastructure .container .img-container img {
+  position: absolute;
+  top: -17rem;
+  left: -5rem;
+  width: 50rem;
+}
+
+.three .container {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  place-items: center;
+  gap: 5rem;
+}
+
+.three .content h3 {
+  font-size: 2.2rem;
+  font-weight: 300;
+  margin-block: 2rem;
+}
+
+.three .content p {
+  font-size: 1.5rem;
+  font-weight: 300;
+  line-height: 1.7;
+  opacity: 0.9;
+  margin-bottom: 4rem;
+  max-width: 50rem;
+}
+
+.footer {
+  background: hsl(240, 10%, 16%);
+  border-top-right-radius: 7rem;
+  padding-block: 6.5rem;
+}
+
+.footer .container {
+  display: flex;
+  justify-content: space-around;
+}
+
+.footer .col h4 {
+  color: hsl(0, 0%, 100%);
+  font-size: 1.3rem;
+  margin-bottom: 2.4rem;
+}
+
+.footer .col ul {
+  display: flex;
+  flex-direction: column;
+}
+
+.footer .col ul li {
+  margin-block: 0.5rem;
+}
+
+.footer .col ul li a {
+  color: hsl(0, 0%, 100%, 0.8);
+  font-size: 1.3rem;
+}
+
+.footer .col ul li a:hover {
+  text-decoration: underline;
+}
+
+.footer .col img {
+  width: 80%;
+}
+
+/* Media queries */
+@media screen and (max-width: 900px) {
+  .nav-list,
+  .btn-list {
+    display: none;
+  }
+
+  .navbar {
+    position: relative;
+  }
+
+  .hamburger {
+    display: block;
+    margin-left: auto;
+    cursor: pointer;
+  }
+
+  .mobile-nav {
+    position: absolute;
+    top: 10rem;
+    right: -110%;
+    width: 100%;
+    text-align: center;
+    background: #fff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 1rem;
+    padding: 2.4rem;
+    box-shadow: 0 1rem 2rem rgb(0, 0, 0, 0.2);
+    z-index: 10;
+    transition: all 0.3s ease;
+  }
+
+  .mobile-nav.active {
+    right: 0;
+  }
+
+  .mobile-list {
+    position: relative;
+    width: 100%;
+  }
+
+  .mobile-link {
+    font-size: 1.4rem;
+    font-weight: 600;
+    color: hsl(207, 13%, 34%);
+  }
+
+  .mobile-link:hover {
+    opacity: 0.8;
+  }
+
+  hr {
+    opacity: 0.2;
+    margin-block: 2rem;
+  }
+
+  .mobile-sublinks {
+    height: 0;
+    overflow: hidden;
+    visibility: hidden;
+    transition: all 0.1s ease;
+    background: #f5f5f5;
+
+    border-radius: 1rem;
+    margin-bottom: 2rem;
+  }
+
+  .mobile-sublinks.active {
+    overflow: visible;
+    visibility: visible;
+    height: auto;
+    padding: 2rem 2rem 0.5rem 2rem;
+  }
+
+  .mobile-sublinks li {
+    margin-bottom: 1.6rem;
+  }
+
+  .mobile-sublink {
+    color: hsl(207, 13%, 34%, 0.8);
+    font-size: 1.3rem;
+    font-weight: 600;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .hero {
+    text-align: center;
+    min-height: 40vh;
+  }
+  .hero h1 {
+    font-size: 3rem;
+  }
+
+  .design .container {
+    grid-template-columns: 1fr;
+  }
+
+  .design .container .content {
+    order: 2;
+  }
+
+  .design h3,
+  p {
+    text-align: center;
+  }
+
+  .infrastructure {
+    margin-top: 10rem;
+  }
+
+  .infrastructure .container {
+    grid-template-columns: 1fr;
+    padding-block: 10rem;
+  }
+
+  .infrastructure .content h3 {
+    text-align: center;
+    font-size: 3.6rem;
+    margin-top: 7rem;
+  }
+
+  .infrastructure .container .img-container img {
+    top: -25rem;
+    left: 0;
+  }
+
+  .three .container {
+    grid-template-columns: 1fr;
+  }
+
+  .three .content h3 {
+    text-align: center;
+  }
+
+  .footer .container {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .footer .col img {
+    width: 35%;
+    margin-bottom: 5rem;
+  }
+
+  .footer .col h4 {
+    font-size: 1.5rem;
+  }
+
+  .footer .col ul {
+    margin-bottom: 2rem;
+  }
+
+  .footer .col ul li a {
+    font-size: 1.5rem;
+  }
+}
